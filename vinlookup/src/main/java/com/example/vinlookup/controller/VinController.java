@@ -11,7 +11,8 @@ import com.example.vinlookup.service.VinService;
 
 @RestController
 @RequestMapping("/api/vin")
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:8080",
+    "https://21joha08.github.io"}) // Tillåt CORS för React-appen
 public class VinController {
 
     private final VinService vinService;
